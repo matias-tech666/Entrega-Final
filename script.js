@@ -12,37 +12,37 @@ mensajes.style.color = "#e33333";
 
 
 if (nombre.length < 2) {
-mensajes.textContent = "❌ El nombre debe tener al menos 2 caracteres.";
+mensajes.textContent = "El nombre debe tener al menos 2 caracteres.";
 return;
 }
 
 
 if (apellido.length < 3) {
-mensajes.textContent = "❌ El apellido debe tener al menos 3 caracteres.";
+mensajes.textContent = "El apellido debe tener al menos 3 caracteres.";
 return;
 }
 
 
 let regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 if (!regexEmail.test(email)) {
-mensajes.textContent = "❌ Ingresá un email válido.";
+mensajes.textContent = "Ingresá un email válido.";
 return;
 }
 
 
 if (fecha === "") {
-mensajes.textContent = "❌ Seleccioná una fecha de nacimiento.";
+mensajes.textContent = "Seleccioná una fecha de nacimiento.";
 return;
 }
 
 
 if (info.length < 10) {
-mensajes.textContent = "❌ La información adicional debe tener al menos 10 caracteres.";
+mensajes.textContent = "La información adicional debe tener al menos 10 caracteres.";
 return;
 }
 
 mensajes.style.color = "green";
-mensajes.textContent = "✔ Envío exitoso";
+mensajes.textContent = "Envío exitoso";
 }
 
 function validarLogin() {
@@ -53,18 +53,18 @@ function validarLogin() {
     msg.innerHTML = "";
 
     if (user === "" || pass === "") {
-        msg.innerHTML = "⚠ Debes completar ambos campos.";
+        msg.innerHTML = "Debes completar ambos campos.";
         msg.style.color = "red";
         return false;
     }
 
     if (pass.length < 6) {
-        msg.innerHTML = "⚠ La contraseña debe tener al menos 6 caracteres.";
+        msg.innerHTML = "La contraseña debe tener al menos 6 caracteres.";
         msg.style.color = "red";
         return false;
     }
 
-    msg.innerHTML = "✔ Login exitoso";
+    msg.innerHTML = "Login exitoso";
     msg.style.color = "green";
     return false;
 }
